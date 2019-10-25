@@ -16,10 +16,9 @@ public class Ejecutor extends Soldado{
         super();
     }
 
-    public Ejecutor(Arma arma, ArrayList<Arma> bombas, String nombre, String lugar, int edad, String sexo) {
-        super(nombre, lugar, edad, sexo);
+    public Ejecutor(Arma arma, String nombre, String lugar, int edad, String sexo, int x, int y) {
+        super(nombre, lugar, edad, sexo, x, y);
         this.arma = arma;
-        this.bombas = bombas;
     }
 
     public Arma getArma() {
