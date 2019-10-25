@@ -70,7 +70,9 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
 
     public ArrayList<Ejercito> predefinido(){
         ArrayList<Ejercito> pre = new ArrayList<>();
-        pre.add(new Ejercito());
+        pre.add(new Ejercito("Rojo", "Zocovia", 0, 500));
+        pre.get(0).getSoldados().add(new Soldado("", "", 23, ""));
+        pre.add(new Ejercito("Azul", "Checkoslovakia", 0, 750));
         return pre;
     }
 
