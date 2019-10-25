@@ -14,8 +14,8 @@ public class General extends Soldado{
         super();
     }
 
-    public General(int años_mando, Arma arma, String nombre, String lugar, int edad, String sexo, int x, int y) {
-        super(nombre, lugar, edad, sexo, x , y);
+    public General(int años_mando, Arma arma, String nombre, int [] lugar, int edad, String sexo) {
+        super(nombre, lugar, edad, sexo);
         this.años_mando = años_mando;
         this.arma = arma;
     }

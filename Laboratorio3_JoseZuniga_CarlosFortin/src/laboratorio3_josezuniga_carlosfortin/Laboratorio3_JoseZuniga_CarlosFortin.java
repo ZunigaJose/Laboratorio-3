@@ -6,7 +6,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
     public static Scanner leer=new Scanner(System.in);
     public static void main(String[] args) {
         
-        ArrayList<Ejercito> ejercitos=new ArrayList();
+        ArrayList<Ejercito> ejercitos = new ArrayList();
         int opcion=0;
         while(opcion!=11)
         {
@@ -71,7 +71,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
     public ArrayList<Ejercito> predefinido(){
         ArrayList<Ejercito> pre = new ArrayList<>();
         pre.add(new Ejercito("Rojo", "Zocovia", 0, 500));
-        pre.get(0).getSoldados().add(new Soldado("", "", 23, ""));
+        pre.get(0).getSoldados().add(new Soldado("", 23, ""));
         pre.add(new Ejercito("Azul", "Checkoslovakia", 0, 750));
         return pre;
     }
