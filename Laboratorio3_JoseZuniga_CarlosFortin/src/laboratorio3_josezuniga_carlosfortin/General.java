@@ -20,6 +20,12 @@ public class General extends Soldado{
         this.arma = arma;
     }
 
+    public General(int años_mando, Arma arma, String nombre, int edad, String sexo) {
+        super(nombre, edad, sexo);
+        this.años_mando = años_mando;
+        this.arma = arma;
+    }
+
     public int getAños_mando() {
         return años_mando;
     }

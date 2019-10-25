@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Laboratorio3_JoseZuniga_CarlosFortin {
     public static Scanner leer=new Scanner(System.in);
     public static void main(String[] args) {
-        
-        
-        
+        int [][] tablero = new int [10][10];
+        ArrayList<Ejercito> list = new ArrayList<>();
+        list = predefinido();
         
         
         
@@ -276,8 +276,10 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
     
     public static ArrayList<Ejercito> predefinido(){
         ArrayList<Ejercito> pre = new ArrayList<>();
+        ArrayList<Arma> preArmas = new ArrayList<>();
+        preArmas = Armas();
         pre.add(new Ejercito("Rojo", "Zocovia", 0, 500));
-        pre.get(0).getSoldados().add(new General(1, "Juan P.", 23, "Masculino"));
+        pre.get(0).getSoldados().add(new General(1, preArmas.get(0),"Juan P.", 23, "Masculino"));
         pre.get(0).getSoldados().add(new Soldado("Ernesto C.", 31, "Masculino"));
         pre.get(0).getSoldados().add(new Soldado("Maria A.", 19, "Femenino"));
         pre.get(0).getSoldados().add(new Soldado("Enrique M.", 22, "Masculino"));

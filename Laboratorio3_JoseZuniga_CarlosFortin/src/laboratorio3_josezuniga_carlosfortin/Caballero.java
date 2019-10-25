@@ -18,6 +18,13 @@ public class Caballero extends Soldado{
         this.arma = arma;
     }
 
+    public Caballero(Arma arma, String nombre, int edad, String sexo) {
+        super(nombre, edad, sexo);
+        this.arma = arma;
+    }
+    
+    
+
     public Arma getArma() {
         return arma;
     }
