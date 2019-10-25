@@ -1,6 +1,8 @@
 
 package laboratorio3_josezuniga_carlosfortin;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Carlos Fortin
@@ -8,16 +10,16 @@ package laboratorio3_josezuniga_carlosfortin;
 public class Ejecutor extends Soldado{
     
     private Arma arma;
-    private Arma bomba;
+    private ArrayList<Arma> bombas=new ArrayList();
 
     public Ejecutor() {
         super();
     }
 
-    public Ejecutor(Arma arma, Arma bomba, String nombre, String lugar, int edad, String sexo) {
+    public Ejecutor(Arma arma, ArrayList<Arma> bombas, String nombre, String lugar, int edad, String sexo) {
         super(nombre, lugar, edad, sexo);
         this.arma = arma;
-        this.bomba = bomba;
+        this.bombas = bombas;
     }
 
     public Arma getArma() {
@@ -28,17 +30,25 @@ public class Ejecutor extends Soldado{
         this.arma = arma;
     }
 
-    public Arma getBomba() {
-        return bomba;
+    public ArrayList<Arma> getBombas() {
+        return bombas;
     }
 
-    public void setBomba(Arma bomba) {
-        this.bomba = bomba;
+    public void setBombas(ArrayList<Arma> bombas) {
+        this.bombas = bombas;
+    }
+    
+    public Arma getBomba(int pos){
+        return bombas.get(pos);
+    }
+    
+    public void setBomba(Arma bomba){
+        this.bombas.add(bomba);
     }
 
     @Override
     public String toString() {
-        return "Ejecutor{" + "arma=" + arma + ", bomba=" + bomba + '}';
+        return "Ejecutor{" + "arma=" + arma + ", bomba=" + bombas + '}';
     }
     
     
