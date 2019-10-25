@@ -8,6 +8,9 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         String [][] tablero = new String[10][10];
         ArrayList<Ejercito> list = new ArrayList<>();
         list = predefinido();
+        list = posicionesRandom(list);
+        tablero = tablero(list);
+        imprimir(tablero);
         
         
         
@@ -41,10 +44,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         
         
         
-        
-        
-        
-        
+                
         
         
         
@@ -473,7 +473,23 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         return tablero;
     }
     
-    public static ArrayList<Ejercito> posicionesRandom(ArrayList<Ejercito> list){
+    public static void imprimir(String[][] tablero){
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[0].length; j++) {
+                System.out.print("[" + tablero[i][j] + "]");
+            }
+            System.out.println("");
+        }
+    }
+    
+    public static ArrayList<Ejercito> posicionesRandom(ArrayList<Ejercito> list) {
+        int arr[];
+        for (Ejercito e : list) {
+            for (int i = 0; i < e.getSoldados().size(); i++) {
+                arr = posiciones(list);
+                e.getSoldados().get(i).setLugar(arr);
+            }
+        }
         return list;
     }
 }
