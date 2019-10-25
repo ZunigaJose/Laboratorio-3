@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Laboratorio3_JoseZuniga_CarlosFortin {
     public static Scanner leer=new Scanner(System.in);
     public static void main(String[] args) {
-        int [][] tablero = new int [10][10];
+        String [][] tablero = new String[10][10];
         ArrayList<Ejercito> list = new ArrayList<>();
         list = predefinido();
         
@@ -392,6 +392,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         pre.add(new ArmaBlanca("Plata", "Cuchillo oxidado", 5));
         pre.add(new Rifle(true, 40, 7, "Ak47", 78));
         pre.add(new Rifle(true, 50, 10, "Asimov", 90));
+        pre.add(new ArmaBlanca("Metal", "Navaja Filosa", 15));
         return pre;
     }
     
@@ -442,5 +443,22 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
             }
         }
         return arr;
+    }
+    
+    public static String[][] tablero(ArrayList<Ejercito> list){
+        String[][] tablero = new String[10][10];
+        int[] arr = new int[2];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                tablero[i][j] = " ";
+            }
+        }
+        for (Ejercito e : list) {
+            for (int i = 0; i < e.getSoldados().size(); i++) {
+                arr = e.getSoldados().get(i).getLugar();
+                tablero[arr[0]][arr[1]] = "*";
+            }
+        }
+        return tablero;
     }
 }
