@@ -68,9 +68,11 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
     
     
 
-    //public ArrayList<Ejercito> predefinido(){
-        //ArrayList<Ejercito> pre = new ArrayList<>();
-    //}
+    public ArrayList<Ejercito> predefinido(){
+        ArrayList<Ejercito> pre = new ArrayList<>();
+        pre.add(new Ejercito());
+        return pre;
+    }
 
 
     

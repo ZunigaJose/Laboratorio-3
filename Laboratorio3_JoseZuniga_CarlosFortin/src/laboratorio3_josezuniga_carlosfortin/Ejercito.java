@@ -8,6 +8,9 @@ public class Ejercito {
     private double dinero;
     private ArrayList<Soldado> soldados = new ArrayList<>();
 
+    public Ejercito() {
+    }
+    
     public Ejercito(String nombre, String region, int victorias, double dinero) {
         this.nombre = nombre;
         this.region = region;
