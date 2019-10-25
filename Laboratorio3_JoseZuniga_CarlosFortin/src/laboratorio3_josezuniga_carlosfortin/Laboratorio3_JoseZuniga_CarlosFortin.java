@@ -8,9 +8,9 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         
         ArrayList<Ejercito> ejercitos = new ArrayList();
         int opcion=0;
-        while(opcion!=11)
+        while(opcion!=9)
         {
-            System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", "Ingrese una opcion: ","1. Agregar ejercito", "2. Modificar ejercito", "3. Listar ejercitos", "4. Eliminar un ejercito", "5. Agregar soldados", "6. Listar soldados", "7. Eliminar un soldado", "8. Agregar armas", "9. Listar armas", "10. Eliminar un arma", "11. Salir", "Opcion Ingresada: ");
+            System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", "Ingrese una opcion: ","1. Agregar ejercito", "2. Modificar ejercito", "3. Listar ejercitos", "4. Eliminar un ejercito", "5. Listar soldados", "6. Eliminar un soldado", "7. Listar armas", "8. Eliminar un arma", "9. Salir", "Opcion Ingresada: ");
             opcion=leer.nextInt();
             
             switch(opcion){
@@ -29,6 +29,46 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                 case 2:
                     System.out.print("Ingrese la posicion del ejercito que desea modificar: ");
                     int pos=leer.nextInt();
+                    if(pos>ejercitos.size()-1)
+                        System.out.println("La posicion ingresada no es valida");
+                    else
+                    {
+                        System.out.printf("%s\n%s\n%s\n%s\n%s\n%s", "Ingrese que desea modificar: ", "1. El nombre del ejercito", "2. La region", "3. La cantidad de victorias", "4. Dinero disponible", "5. Regresar");
+                        int op2=leer.nextInt();
+                        switch(op2)
+                        {
+                            case 1:
+                                System.out.print("Ingrese el nuevo nombre: ");
+                                nombre=leer.next();
+                                ejercitos.get(pos).setNombre(nombre);
+                                break;
+                                
+                            case 2:
+                                System.out.print("Ingrese la nueva region: ");
+                                region=leer.next();
+                                ejercitos.get(pos).setRegion(region);
+                                break;
+                                
+                            case 3:
+                                System.out.print("Ingrese la nueva cantidad de victorias: ");
+                                victorias=leer.nextInt();
+                                ejercitos.get(pos).setVictorias(victorias);
+                                break;
+                                
+                            case 4:
+                                System.out.print("Ingrese la nueva cantidad de dinero disponible: ");
+                                dinero=leer.nextDouble();
+                                ejercitos.get(pos).setDinero(dinero);
+                                break;
+                                
+                            case 5:
+                                break;
+                                
+                            case 6:
+                                System.out.println("La opcion ingresada no es valida");
+                                break;
+                        }
+                    }
                     break;
             }
         }//fin while
