@@ -73,10 +73,12 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     ejercitos.add(new Ejercito(nombre,region,victorias,dinero));
                     while(ejercitos.get(ejercitos.size()-1).getSoldados().size()<5){
                         System.out.print("Ingrese el nombre del soldado: ");
+                        leer.nextLine();
                         nombre=leer.nextLine();
                         System.out.print("Ingrese la edad del soldado: ");
                         int edad=leer.nextInt();
                         System.out.print("Ingrese el sexo del soldado: ");
+                        leer.nextLine();
                         String sexo=leer.nextLine();
                         System.out.printf("%s\n%s\n%s\n%s", "Ingrese el tipo de soldado: ", "1. General", "2. Caballero", "3. Ejecutor");
                         int tipo=leer.nextInt();
@@ -90,6 +92,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                 switch(selecArma){
                                     case 1:
                                         System.out.print("Ingrese el nombre: ");
+                                        leer.nextLine();
                                         String nomArma=leer.nextLine();
                                         System.out.println("Ingrese el precio del arma: ");
                                         double precioArma=leer.nextDouble();
@@ -109,11 +112,13 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                         
                                     case 2:
                                         System.out.print("Ingrese el nombre: ");
+                                        leer.nextLine();
                                         nomArma=leer.nextLine();
                                         System.out.println("Ingrese el precio del arma: ");
                                         precioArma=leer.nextDouble();
                                         System.out.print("Ingrese el material");
-                                        String material=leer.next();
+                                        leer.nextLine();
+                                        String material=leer.nextLine();
                                         ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new ArmaBlanca(material,nomArma,precioArma),nombre,edad,sexo));
                                         break;
                                         
@@ -129,7 +134,8 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                 switch(selecArma){
                                     case 1:
                                         System.out.print("Ingrese el nombre: ");
-                                        String nomArma=leer.next();
+                                        leer.nextLine();
+                                        String nomArma=leer.nextLine();
                                         System.out.println("Ingrese el precio del arma: ");
                                         double precioArma=leer.nextDouble();
                                         System.out.print("Ingrese el alcance maximo: ");
@@ -148,11 +154,13 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                         
                                     case 2:
                                         System.out.print("Ingrese el nombre: ");
-                                        nomArma=leer.next();
+                                        leer.nextLine();
+                                        nomArma=leer.nextLine();
                                         System.out.println("Ingrese el precio del arma: ");
                                         precioArma=leer.nextDouble();
                                         System.out.print("Ingrese el material");
-                                        String material=leer.next();
+                                        leer.nextLine();
+                                        String material=leer.nextLine();
                                         ejercitos.get(ejercitos.size()-1).getSoldados().add(new Caballero(new ArmaBlanca(material,nomArma,precioArma),nombre,edad,sexo));
                                         break;
                                         
@@ -168,7 +176,8 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                 switch(selecArma){
                                     case 1:
                                         System.out.print("Ingrese el nombre: ");
-                                        String nomArma=leer.next();
+                                        leer.nextLine();
+                                        String nomArma=leer.nextLine();
                                         System.out.println("Ingrese el precio del arma: ");
                                         double precioArma=leer.nextDouble();
                                         System.out.print("Ingrese el alcance maximo: ");
@@ -187,10 +196,12 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                         
                                     case 2:
                                         System.out.print("Ingrese el nombre: ");
-                                        nomArma=leer.next();
+                                        leer.nextLine();
+                                        nomArma=leer.nextLine();
                                         System.out.println("Ingrese el precio del arma: ");
                                         precioArma=leer.nextDouble();
                                         System.out.print("Ingrese el material");
+                                        leer.nextLine();
                                         String material=leer.next();
                                         ejercitos.get(ejercitos.size()-1).getSoldados().add(new Ejecutor(new ArmaBlanca(material,nomArma,precioArma),nombre,edad,sexo));
                                         break;
