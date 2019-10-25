@@ -62,9 +62,10 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
             switch(opcion){
                 case 1:
                     System.out.print("Ingrese el nombre del ejercito: ");
-                    String nombre=leer.next();
+                    leer.nextLine();
+                    String nombre=leer.nextLine();
                     System.out.print("Ingrese el nombre de la region: ");
-                    String region=leer.next();
+                    String region=leer.nextLine();
                     System.out.print("Ingrese la cantidad de victorias: ");
                     int victorias=leer.nextInt();
                     System.out.println("Ingrese la cantidad de dinero disponible: ");
@@ -72,13 +73,11 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     ejercitos.add(new Ejercito(nombre,region,victorias,dinero));
                     while(ejercitos.get(ejercitos.size()-1).getSoldados().size()<5){
                         System.out.print("Ingrese el nombre del soldado: ");
-                        nombre=leer.next();
-                        System.out.print("Ingrese el lugar del soldado: ");
-                        String lugar=leer.next();
+                        nombre=leer.nextLine();
                         System.out.print("Ingrese la edad del soldado: ");
                         int edad=leer.nextInt();
                         System.out.print("Ingrese el sexo del soldado: ");
-                        String sexo=leer.next();
+                        String sexo=leer.nextLine();
                         System.out.printf("%s\n%s\n%s\n%s", "Ingrese el tipo de soldado: ", "1. General", "2. Caballero", "3. Ejecutor");
                         int tipo=leer.nextInt();
                         
@@ -91,6 +90,45 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                 switch(selecArma){
                                     case 1:
                                         System.out.print("Ingrese el nombre: ");
+                                        String nomArma=leer.nextLine();
+                                        System.out.println("Ingrese el precio del arma: ");
+                                        double precioArma=leer.nextDouble();
+                                        System.out.print("Ingrese el alcance maximo: ");
+                                        int max=leer.nextInt();
+                                        System.out.print("Ingrese el alcance minimo: ");
+                                        int min=leer.nextInt();
+                                        System.out.print("Es el arma automatica? [s/n]: ");
+                                        char aut=leer.next().charAt(0);
+                                        boolean au=false;
+                                        if(aut=='s' || aut=='S')
+                                            au=true;
+                                        else if(aut=='n' || aut=='N')
+                                            au=false;
+                                        ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new Rifle(au,max,min,nomArma,precioArma),nombre,edad,sexo));
+                                        break;
+                                        
+                                    case 2:
+                                        System.out.print("Ingrese el nombre: ");
+                                        nomArma=leer.nextLine();
+                                        System.out.println("Ingrese el precio del arma: ");
+                                        precioArma=leer.nextDouble();
+                                        System.out.print("Ingrese el material");
+                                        String material=leer.next();
+                                        ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new ArmaBlanca(material,nomArma,precioArma),nombre,edad,sexo));
+                                        break;
+                                        
+                                    default:
+                                        System.out.println("La opcion elegida no es valida");
+                                        break;
+                                }//fin switch arma
+                                break;
+                                
+                            case 2:
+                                System.out.printf("%s\n%s\n%s", "Ingrese el tipo de arma: ", "1. Rifle", "2. Arma blanca");
+                                selecArma=leer.nextInt();
+                                switch(selecArma){
+                                    case 1:
+                                        System.out.print("Ingrese el nombre: ");
                                         String nomArma=leer.next();
                                         System.out.println("Ingrese el precio del arma: ");
                                         double precioArma=leer.nextDouble();
@@ -100,25 +138,70 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                         int min=leer.nextInt();
                                         System.out.print("Es el arma automatica? [s/n]: ");
                                         char aut=leer.next().charAt(0);
-                                        boolean au;
+                                        boolean au=false;
                                         if(aut=='s' || aut=='S')
                                             au=true;
                                         else if(aut=='n' || aut=='N')
                                             au=false;
-                                        //ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new Rifle(max,min,au,nomArma,precioArma),nombre,lugar,edad,sexo));
+                                        ejercitos.get(ejercitos.size()-1).getSoldados().add(new Caballero(new Rifle(au,max,min,nomArma,precioArma),nombre,edad,sexo));
                                         break;
                                         
                                     case 2:
-                                        
+                                        System.out.print("Ingrese el nombre: ");
+                                        nomArma=leer.next();
+                                        System.out.println("Ingrese el precio del arma: ");
+                                        precioArma=leer.nextDouble();
+                                        System.out.print("Ingrese el material");
+                                        String material=leer.next();
+                                        ejercitos.get(ejercitos.size()-1).getSoldados().add(new Caballero(new ArmaBlanca(material,nomArma,precioArma),nombre,edad,sexo));
                                         break;
                                         
                                     default:
                                         System.out.println("La opcion elegida no es valida");
                                         break;
-                                }
+                                }//fin switch arma
                                 break;
-                        }
-                    }
+                                
+                            case 3:
+                                System.out.printf("%s\n%s\n%s", "Ingrese el tipo de arma: ", "1. Rifle", "2. Arma blanca");
+                                selecArma=leer.nextInt();
+                                switch(selecArma){
+                                    case 1:
+                                        System.out.print("Ingrese el nombre: ");
+                                        String nomArma=leer.next();
+                                        System.out.println("Ingrese el precio del arma: ");
+                                        double precioArma=leer.nextDouble();
+                                        System.out.print("Ingrese el alcance maximo: ");
+                                        int max=leer.nextInt();
+                                        System.out.print("Ingrese el alcance minimo: ");
+                                        int min=leer.nextInt();
+                                        System.out.print("Es el arma automatica? [s/n]: ");
+                                        char aut=leer.next().charAt(0);
+                                        boolean au=false;
+                                        if(aut=='s' || aut=='S')
+                                            au=true;
+                                        else if(aut=='n' || aut=='N')
+                                            au=false;
+                                        ejercitos.get(ejercitos.size()-1).getSoldados().add(new Ejecutor(new Rifle(au,max,min,nomArma,precioArma),nombre,edad,sexo));
+                                        break;
+                                        
+                                    case 2:
+                                        System.out.print("Ingrese el nombre: ");
+                                        nomArma=leer.next();
+                                        System.out.println("Ingrese el precio del arma: ");
+                                        precioArma=leer.nextDouble();
+                                        System.out.print("Ingrese el material");
+                                        String material=leer.next();
+                                        ejercitos.get(ejercitos.size()-1).getSoldados().add(new Ejecutor(new ArmaBlanca(material,nomArma,precioArma),nombre,edad,sexo));
+                                        break;
+                                        
+                                    default:
+                                        System.out.println("La opcion elegida no es valida");
+                                        break;
+                                }//fin switch arma
+                                break;
+                        }//fin switch tipo
+                    }//fin while
                     break;
                     
                 case 2:
@@ -167,7 +250,11 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     break;
                     
                 case 3:
-                    
+                    String salida="";
+                    for (Ejercito e : ejercitos) {
+                        salida+=ejercitos.indexOf(e)+"- "+e+"\n";
+                    }
+                    System.out.println(salida);
                     break;
             }
         }//fin while
