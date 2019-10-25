@@ -57,6 +57,12 @@ public class Ejercito {
     public void setDinero(double dinero) {
         this.dinero = dinero;
     }
+
+    @Override
+    public String toString() {
+        return "Ejercito{" + "nombre=" + nombre + ", region=" + region + ", victorias=" + victorias + ", dinero=" + dinero + ", soldados=" + soldados + '}';
+    }
+    
     
     
 }
