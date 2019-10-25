@@ -24,6 +24,46 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     System.out.println("Ingrese la cantidad de dinero disponible: ");
                     double dinero=leer.nextDouble();
                     ejercitos.add(new Ejercito(nombre,region,victorias,dinero));
+                    while(ejercitos.get(ejercitos.size()-1).getSoldados().size()<5){
+                        System.out.printf("%s\n%s\n%s\n%s", "Ingrese el tipo de soldado: ", "1. General", "2. Caballero", "3. Ejecutor");
+                        int tipo=leer.nextInt();
+                        
+                        switch(tipo){
+                            case 1:
+                                System.out.println("Ingrese el numero de años al mando: ");
+                                int años=leer.nextInt();
+                                System.out.printf("%s\n%s\n%s", "Ingrese el tipo de arma: ", "1. Rifle", "2. Arma blanca");
+                                int selecArma=leer.nextInt();
+                                switch(selecArma){
+                                    case 1:
+                                        System.out.print("Ingrese el nombre: ");
+                                        String nomArma=leer.next();
+                                        System.out.println("");
+                                        System.out.print("Ingrese el alcance maximo: ");
+                                        int max=leer.nextInt();
+                                        System.out.print("Ingrese el alcance minimo: ");
+                                        int min=leer.nextInt();
+                                        System.out.print("Es el arma automatica? [s/n]: ");
+                                        char aut=leer.next().charAt(0);
+                                        boolean au;
+                                        if(aut=='s' || aut=='S')
+                                            au=true;
+                                        else if(aut=='n' || aut=='N')
+                                            au=false;
+                                        //ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new Rifle(max,min,au)));
+                                        break;
+                                        
+                                    case 2:
+                                        
+                                        break;
+                                        
+                                    default:
+                                        System.out.println("La opcion elegida no es valida");
+                                        break;
+                                }
+                                break;
+                        }
+                    }
                     break;
                     
                 case 2:
@@ -69,6 +109,10 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                 break;
                         }
                     }
+                    break;
+                    
+                case 3:
+                    
                     break;
             }
         }//fin while
