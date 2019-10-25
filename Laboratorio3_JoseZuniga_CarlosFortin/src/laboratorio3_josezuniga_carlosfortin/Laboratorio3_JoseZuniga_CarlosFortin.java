@@ -10,7 +10,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         int opcion=0;
         while(opcion!=11)
         {
-            System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", "Ingrese una opcion: ","1. Agregar ejercito", "2. Modificar ejercito", "3. Listar ejercitos", "4. Eliminar un ejercito", "5. Agregar soldados", "6. Listar soldados", "7. Eliminar un soldado", "8. Agregar armas", "9. Listar armas", "10. Eliminar un arma", "11. Salir");
+            System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", "Ingrese una opcion: ","1. Agregar ejercito", "2. Modificar ejercito", "3. Listar ejercitos", "4. Eliminar un ejercito", "5. Agregar soldados", "6. Listar soldados", "7. Eliminar un soldado", "8. Agregar armas", "9. Listar armas", "10. Eliminar un arma", "11. Salir", "Opcion ingresada: ");
             opcion=leer.nextInt();
             
             switch(opcion){
