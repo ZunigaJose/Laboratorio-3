@@ -267,7 +267,23 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     }
                     System.out.println(salida);
                     break;
-            }
+                    
+                case 4:
+                    System.out.print("Ingrese la posicion que desea eliminar: ");
+                    pos=leer.nextInt();
+                    if(pos>ejercitos.size()-1)
+                        System.out.println("La posicion ingresada no es valida");
+                    else
+                        ejercitos.remove(pos);
+                    break;
+                    
+                case 5:
+                    salida="";
+                    for (Ejercito r : ejercitos) {
+                        salida+=ejercitos.get(ejercitos.indexOf(r)).getSoldados();
+                    }
+                    break;
+            }//fin opcion
         }//fin while
     }//fin main
     
