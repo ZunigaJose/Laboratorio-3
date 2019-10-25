@@ -50,6 +50,6 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
     
     
     
-    public ArrayList<Eje
+    //public ArrayList<Ejercito>
     
 }

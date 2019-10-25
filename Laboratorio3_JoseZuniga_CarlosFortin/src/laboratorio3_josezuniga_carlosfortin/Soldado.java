@@ -24,6 +24,13 @@ public class Soldado {
         this.x = x;
         this.y = y;
     }
+    
+    public Soldado(String nombre, String lugar, int edad, String sexo) {
+        this.nombre = nombre;
+        this.lugar = lugar;
+        this.edad = edad;
+        this.sexo = sexo;
+    }
 
     public int getX() {
         return x;
