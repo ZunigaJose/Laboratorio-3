@@ -15,11 +15,20 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
             
             switch(opcion){
                 case 1:
-                    
+                    System.out.print("Ingrese el nombre del ejercito: ");
+                    String nombre=leer.next();
+                    System.out.print("Ingrese el nombre de la region: ");
+                    String region=leer.next();
+                    System.out.print("Ingrese la cantidad de victorias: ");
+                    int victorias=leer.nextInt();
+                    System.out.println("Ingrese la cantidad de dinero disponible: ");
+                    double dinero=leer.nextDouble();
+                    ejercitos.add(new Ejercito(nombre,region,victorias,dinero));
                     break;
                     
                 case 2:
-                    
+                    System.out.print("Ingrese la posicion del ejercito que desea modificar: ");
+                    int pos=leer.nextInt();
                     break;
             }
         }//fin while
