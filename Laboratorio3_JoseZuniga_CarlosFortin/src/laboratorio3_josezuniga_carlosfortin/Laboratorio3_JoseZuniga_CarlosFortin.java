@@ -205,4 +205,52 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         return pre;
     }
     
+    public static boolean haySoldado(ArrayList<Ejercito> list, int [] pos){
+        for (Ejercito e : list) {
+            for (int i = 0; i < e.getSoldados().size(); i++) {
+                if (e.getSoldados().get(i).getLugar() == pos) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    public static int [] posicionesIngreso (){
+        System.out.print("Ingrese x:" );
+        int x = leer.nextInt();
+        leer.nextLine();
+        while (x < 0 || x > 9) {
+            System.out.print("Error Ingreso Incorrecto!!!\nVuelva a Intentar:");
+            leer.nextInt();
+            leer.nextLine();
+        }
+        System.out.print("Ingrese y:" );
+        int y = leer.nextInt();
+        leer.nextLine();
+        while (y < 0 || y > 9) {
+            System.out.print("Error Ingreso Incorrecto!!!\nVuelva a Intentar:");
+            leer.nextInt();
+            leer.nextLine();
+        }
+        int [] arr = new int[2];
+        arr[0] = x;
+        arr[1] = y;
+        return arr;
+    }
+    
+    public static int [] posiciones(ArrayList<Ejercito> list){
+        int [] arr = new int[2];
+        int x,y;
+        while (true) {  
+            x= (int)(0 + Math.random() * 9);
+            y = (int)(0 + Math.random() * 9);
+            arr[0] = x;
+            arr[1] = y;
+            if (!haySoldado(list, arr)) {
+                break;
+            }
+        }
+        return arr;
+    }
 }
