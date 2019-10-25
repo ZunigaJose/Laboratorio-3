@@ -71,6 +71,14 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     double dinero=leer.nextDouble();
                     ejercitos.add(new Ejercito(nombre,region,victorias,dinero));
                     while(ejercitos.get(ejercitos.size()-1).getSoldados().size()<5){
+                        System.out.print("Ingrese el nombre del soldado: ");
+                        nombre=leer.next();
+                        System.out.print("Ingrese el lugar del soldado: ");
+                        String lugar=leer.next();
+                        System.out.print("Ingrese la edad del soldado: ");
+                        int edad=leer.nextInt();
+                        System.out.print("Ingrese el sexo del soldado: ");
+                        String sexo=leer.next();
                         System.out.printf("%s\n%s\n%s\n%s", "Ingrese el tipo de soldado: ", "1. General", "2. Caballero", "3. Ejecutor");
                         int tipo=leer.nextInt();
                         
@@ -84,7 +92,8 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                     case 1:
                                         System.out.print("Ingrese el nombre: ");
                                         String nomArma=leer.next();
-                                        System.out.println("");
+                                        System.out.println("Ingrese el precio del arma: ");
+                                        double precioArma=leer.nextDouble();
                                         System.out.print("Ingrese el alcance maximo: ");
                                         int max=leer.nextInt();
                                         System.out.print("Ingrese el alcance minimo: ");
@@ -96,7 +105,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                                             au=true;
                                         else if(aut=='n' || aut=='N')
                                             au=false;
-                                        //ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new Rifle(max,min,au)));
+                                        //ejercitos.get(ejercitos.size()-1).getSoldados().add(new General(años,new Rifle(max,min,au,nomArma,precioArma),nombre,lugar,edad,sexo));
                                         break;
                                         
                                     case 2:
