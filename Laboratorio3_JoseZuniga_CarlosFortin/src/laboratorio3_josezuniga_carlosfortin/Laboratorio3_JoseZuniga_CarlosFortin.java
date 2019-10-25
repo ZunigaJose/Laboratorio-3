@@ -77,14 +77,92 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
     
     
 
-    public ArrayList<Ejercito> predefinido(){
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public static ArrayList<Ejercito> predefinido(){
         ArrayList<Ejercito> pre = new ArrayList<>();
         pre.add(new Ejercito("Rojo", "Zocovia", 0, 500));
-        pre.get(0).getSoldados().add(new Soldado("", 23, ""));
+        pre.get(0).getSoldados().add(new General(1, "Juan P.", 23, "Masculino"));
+        pre.get(0).getSoldados().add(new Soldado("Ernesto C.", 31, "Masculino"));
+        pre.get(0).getSoldados().add(new Soldado("Maria A.", 19, "Femenino"));
+        pre.get(0).getSoldados().add(new Soldado("Enrique M.", 22, "Masculino"));
+        pre.get(0).getSoldados().add(new Soldado("Marlon N.", 20, "Masculino"));
         pre.add(new Ejercito("Azul", "Checkoslovakia", 0, 750));
         return pre;
     }
 
-
+    public static ArrayList<Arma> Armas(){
+        ArrayList<Arma> pre = new ArrayList<>();
+        pre.add(new Bomba("", 4, "Granada/Bomba", 100));
+        pre.add(new Rifle(true, 15, 1, "Mp5", 55));
+        pre.add(new ArmaBlanca("Plata", "Cuchillo oxidado", 5));
+        pre.add(new Rifle(true, 40, 7, "Ak47", 78));
+        return pre;
+    }
     
 }
