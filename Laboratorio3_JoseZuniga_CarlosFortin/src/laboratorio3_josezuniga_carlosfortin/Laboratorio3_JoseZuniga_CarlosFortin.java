@@ -472,4 +472,8 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         }
         return tablero;
     }
+    
+    public static ArrayList<Ejercito> posicionesRandom(ArrayList<Ejercito> list){
+        return list;
+    }
 }
