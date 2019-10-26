@@ -316,7 +316,7 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     break;
                     
                 case 9:
-                    
+                 
                     break;
                     
                 case 10:
@@ -449,6 +449,12 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         pre.get(0).getSoldados().add(new Caballero(preArmas.get(4),"Enrique M.", 22, "Masculino"));
         pre.get(0).getSoldados().add(new Soldado("Marlon N.", 20, "Masculino"));
         pre.add(new Ejercito("Azul", "Checkoslovakia", 0, 750));
+        pre.get(1).getSoldados().add(new General(4, preArmas.get(1),"Jose N.", 28, "Masculino"));
+        pre.get(1).getSoldados().add(new Caballero(preArmas.get(2), "Esteban Z.", 33, "Masculino"));
+        pre.get(1).getSoldados().add(new Ejecutor(preArmas.get(3), "Mariela G.", 23, "Femenino"));
+        ((Ejecutor)pre.get(1).getSoldados().get(2)).getBombas().add(preArmas.get(0));
+        pre.get(1).getSoldados().add(new Caballero(preArmas.get(4),"Ernesto M.", 24, "Masculino"));
+        pre.get(1).getSoldados().add(new Soldado("Mario M.", 19, "Masculino"));
         return pre;
     }
 
