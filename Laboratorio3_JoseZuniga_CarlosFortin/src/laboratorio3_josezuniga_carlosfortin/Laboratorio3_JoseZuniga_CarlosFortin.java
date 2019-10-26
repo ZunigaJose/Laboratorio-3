@@ -563,7 +563,17 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
             y = list.get(i).getSoldados().get(j).getLugar()[1];
             System.out.println("(" + x  + ", " + y);
         }
-        
+        int [] arr1 = posicionesIngreso();
+        int [] arr = posicionesIngreso();
+        if (haySoldado(list, arr)) {
+            System.out.println("Posicion ocupada!! Pierde turno!");
+        } else {
+            for (int j = 0; j < list.get(i).getSoldados().size(); j++) {
+                if (arr1 == list.get(i).getSoldados().get(j).getLugar()) {
+                    list.get(i).getSoldados().get(j).setLugar(arr);
+                }
+            }
+        }
         return list;
     }
     
