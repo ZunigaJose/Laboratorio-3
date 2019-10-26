@@ -566,4 +566,17 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         
         return list;
     }
+    
+    public static boolean gano(ArrayList<Ejercito> list){
+        int i = 0;
+        for (Ejercito e : list) {
+            if (e.getSoldados().size() == 0) {
+                i++;
+            }
+            if (i == list.size() - 1) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
