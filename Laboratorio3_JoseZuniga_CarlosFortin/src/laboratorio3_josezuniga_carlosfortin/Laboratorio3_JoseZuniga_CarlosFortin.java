@@ -508,4 +508,16 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         }
         return list;
     }
+    
+    public static ArrayList<Ejercito> mover (ArrayList<Ejercito> list, int i){
+        int x, y;
+        System.out.println("Estos son los soldados en el tablero: ");
+        for (int j = 0; j < list.get(i).getSoldados().size(); j++) {
+            x = list.get(i).getSoldados().get(j).getLugar()[0];
+            y = list.get(i).getSoldados().get(j).getLugar()[1];
+            System.out.println("(" + x  + ", " + y);
+        }
+        
+        return list;
+    }
 }
