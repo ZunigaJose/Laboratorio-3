@@ -54,9 +54,9 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
         
         ArrayList<Ejercito> ejercitos = new ArrayList();
         int opcion=0;
-        while(opcion!=9)
+        while(opcion!=10)
         {
-            System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", "Ingrese una opcion: ","1. Agregar ejercito", "2. Modificar ejercito", "3. Listar ejercitos", "4. Eliminar un ejercito", "5. Listar soldados", "6. Eliminar un soldado", "7. Listar armas", "8. Eliminar un arma", "9. Salir", "Opcion Ingresada: ");
+            System.out.printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", "Ingrese una opcion: ","1. Agregar ejercito", "2. Modificar ejercito", "3. Listar ejercitos", "4. Eliminar un ejercito", "5. Listar soldados", "6. Eliminar un soldado", "7. Listar armas", "8. Eliminar un arma", "9. Jugar", "10. Salir", "Opcion Ingresada: ");
             opcion=leer.nextInt();
             
             switch(opcion){
@@ -280,9 +280,49 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                 case 5:
                     salida="";
                     for (Ejercito r : ejercitos) {
-                        salida+=ejercitos.get(ejercitos.indexOf(r)).getSoldados();
+                        salida+=ejercitos.get(ejercitos.indexOf(r)).getSoldados()+"\n";
+                    }
+                    System.out.println(salida);
+                    break;
+                    
+                case 6:
+                    System.out.print("Ingrese la posicion del ejercito del que desea eliminar el soldado: ");
+                    pos=leer.nextInt();
+                    if(pos>ejercitos.size()-1)
+                        System.out.println("La posicion ingresada no es valida");
+                    else
+                    {
+                        System.out.print("Ingrese la posicion del soldado que desea eliminar: ");
+                        int pos2=leer.nextInt();
+                        if(pos2>ejercitos.get(pos).getSoldados().size()-1)
+                            System.out.println("La posicion ingresada no es valida");
+                        else
+                            ejercitos.get(pos).getSoldados().remove(pos2);
                     }
                     break;
+                    
+                case 7:
+                    salida="";
+                    for (Ejercito a : ejercitos) {
+                        for(int i=0;i<ejercitos.get(ejercitos.indexOf(a)).getSoldados().size()-1;i++)
+                        {
+                            //if(ejercitos.get(ejercitos.indexOf(a)).getSoldados().get(i))
+                        }
+                    }
+                    break;
+                    
+                case 8:
+                    
+                    break;
+                    
+                case 9:
+                    
+                    break;
+                    
+                case 10:
+                    
+                    break;
+                    
             }//fin opcion
         }//fin while
     }//fin main
