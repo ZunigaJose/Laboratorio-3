@@ -316,7 +316,15 @@ public class Laboratorio3_JoseZuniga_CarlosFortin {
                     break;
                     
                 case 9:
-                 
+                    while(!gano(list))
+                    {
+                        list=mover(list,0);
+                        tablero=tablero(list);
+                        imprimir(tablero);
+                        list=mover(list,1);
+                        tablero=tablero(list);
+                        imprimir(tablero);
+                    }
                     break;
                     
                 case 10:
